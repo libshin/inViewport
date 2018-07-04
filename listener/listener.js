@@ -14,7 +14,6 @@ function removeListener(id) {
 
 function onVisibilityChange(element, strict, callback) {
   let old_visible;
-  strict = strict || true;
   return () => {
     const visible = inViewport(element, strict);
     if (visible !== old_visible) {

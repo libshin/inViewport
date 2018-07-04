@@ -5,7 +5,6 @@
  * @return {boolean}
  */
 function inViewport(element, strict) {
-  strict = strict || true;
   const rect = element.getBoundingClientRect();
   const height = window.innerHeight || document.documentElement.clientHeight;
   const width = window.innerWidth || document.documentElement.clientWidth;

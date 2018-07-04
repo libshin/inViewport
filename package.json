@@ -1,6 +1,6 @@
 {
   "name": "@libshin/in-viewport",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Check if DOM element is in viewport",
   "source": "in-viewport.js",
   "umd:main": "build/in-viewport.umd.js",
