@@ -6,9 +6,9 @@
  */
 function inViewport(element, strict) {
   strict = strict || true;
-  var rect = element.getBoundingClientRect();
-  var height = window.innerHeight || document.documentElement.clientHeight;
-  var width = window.innerWidth || document.documentElement.clientWidth;
+  const rect = element.getBoundingClientRect();
+  const height = window.innerHeight || document.documentElement.clientHeight;
+  const width = window.innerWidth || document.documentElement.clientWidth;
 
   // All 4 corners should be in viewport
   if (strict) {
@@ -24,4 +24,4 @@ function inViewport(element, strict) {
   );
 }
 
-module.exports = inViewport;
+export default inViewport;

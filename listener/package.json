@@ -1,0 +1,18 @@
+{
+  "name": "@libshin/in-viewport/listener",
+  "version": "0.1.0",
+  "description": "Check if DOM element is in viewport",
+  "source": "../listener.js",
+  "umd:main": "../build/listener.umd.js",
+  "main": "../build/listener.js",
+  "module": "../build/listener.m.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/libshin/inViewport.git"
+  },
+  "author": "Ayc0 (https://ayc0.github.io/stuff/)",
+  "contributors": [
+    "libshin (https://github.com/orgs/libshin/people)"
+  ],
+  "license": "MIT"
+}

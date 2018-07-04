@@ -2,7 +2,10 @@
   "name": "@libshin/in-viewport",
   "version": "0.1.0",
   "description": "Check if DOM element is in viewport",
-  "main": "in_viewport.js",
+  "source": "in-viewport.js",
+  "umd:main": "build/in-viewport.umd.js",
+  "main": "build/in-viewport.js",
+  "module": "build/in-viewport.m.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/libshin/inViewport.git"
@@ -21,6 +24,10 @@
     "js"
   ],
   "scripts": {
+    "build": "microbundle && microbundle --cwd listener",
     "release": "npm publish --access public"
+  },
+  "devDependencies": {
+    "microbundle": "^0.4.4"
   }
 }

@@ -1,9 +1,9 @@
-var inViewport = require("./in_viewport");
+import inViewport from "./in-viewport";
 
-var store = {};
+const store = {};
 
 function addListener(fn) {
-  var id = Date.now();
+  const id = Date.now();
   store[id] = fn;
   return id;
 }
@@ -13,10 +13,10 @@ function removeListener(id) {
 }
 
 function onVisibilityChange(element, strict, callback) {
-  var old_visible;
+  let old_visible;
   strict = strict || true;
-  return function() {
-    var visible = inViewport(element, strict);
+  return () => {
+    const visible = inViewport(element, strict);
     if (visible !== old_visible) {
       old_visible = visible;
       if (typeof callback == "function") {
@@ -34,8 +34,8 @@ function onVisibilityChange(element, strict, callback) {
  * @param {function} callback
  * @return {number}
  */
-function attach(element, strict, callback) {
-  var handler = onVisibilityChange(element, strict, callback);
+export function attach(element, strict, callback) {
+  const handler = onVisibilityChange(element, strict, callback);
   if (window.addEventListener) {
     window.addEventListener("DOMContentLoaded", handler, false);
     window.addEventListener("load", handler, false);
@@ -57,8 +57,8 @@ function attach(element, strict, callback) {
  * @param {number} id
  * @return {boolean}
  */
-function detach(id) {
-  var handler = store[id];
+export function detach(id) {
+  const handler = store[id];
   if (window.removeEventListener) {
     window.removeEventListener("DOMContentLoaded", handler, false);
     window.removeEventListener("load", handler, false);
@@ -74,5 +74,3 @@ function detach(id) {
     return removeListener(handler);
   }
 }
-
-module.exports = { attach: attach, detach: detach };
