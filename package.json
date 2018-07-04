@@ -1,6 +1,6 @@
 {
   "name": "@libshin/in-viewport",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Check if DOM element is in viewport",
   "source": "in-viewport.js",
   "umd:main": "build/in-viewport.umd.js",
@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "build": "microbundle && microbundle --cwd listener",
-    "release": "npm publish --access public"
+    "release": "yarn -s build && npm -s publish --access public"
   },
   "devDependencies": {
     "microbundle": "^0.4.4"
