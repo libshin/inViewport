@@ -23,3 +23,5 @@ function inViewport(element, strict) {
     (rect.left <= width && rect.top <= height)
   );
 }
+
+module.exports = inViewport;
