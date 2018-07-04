@@ -5,7 +5,7 @@ import inViewport from "../";
 const store = {};
 
 function addListener(fn) {
-  const id = Date.now();
+  const id = String(Math.random()).substr(2) + Date.now();
   store[id] = fn;
   return id;
 }
