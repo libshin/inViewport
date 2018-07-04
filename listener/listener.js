@@ -1,4 +1,4 @@
-import inViewport from "./in-viewport";
+import inViewport from "../in-viewport";
 
 const store = {};
 
