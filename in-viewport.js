@@ -15,12 +15,7 @@ function inViewport(element, strict) {
   }
 
   // At least 1 corner is in viewport
-  return (
-    (rect.right >= 0 && rect.bottom >= 0) ||
-    (rect.left <= width && rect.bottom >= 0) ||
-    (rect.right >= 0 && rect.top <= height) ||
-    (rect.left <= width && rect.top <= height)
-  );
+  return rect.right >= 0 && rect.bottom >= 0 && rect.left <= width && rect.top <= height;
 }
 
 export default inViewport;
