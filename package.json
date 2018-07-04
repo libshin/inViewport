@@ -1,0 +1,18 @@
+{
+  "name": "@libshin/in-viewport",
+  "version": "0.0.0",
+  "description": "Check if DOM element is in viewport",
+  "main": "in_viewport.js",
+  "repository": "git@github.com:libshin/inViewport.git",
+  "author": {
+    "name": "Ayc0",
+    "url": "https://ayc0.github.io/stuff/"
+  },
+  "contributors": [
+    {
+      "name": "libshin",
+      "url": "https://github.com/orgs/libshin/people"
+    }
+  ],
+  "license": "MIT"
+}
