@@ -2,7 +2,7 @@
   "name": "@libshin/in-viewport/listener",
   "version": "0.1.0",
   "description": "Check if DOM element is in viewport",
-  "source": "./listener.js",
+  "source": "./index.js",
   "umd:main": "../build/listener.umd.js",
   "main": "../build/listener.js",
   "module": "../build/listener.m.js",

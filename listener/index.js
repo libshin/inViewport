@@ -1,4 +1,6 @@
-import inViewport from "../in-viewport";
+// https://codepen.io/ayc0/pen/rKgNEe
+
+import inViewport from "../";
 
 const store = {};
 
