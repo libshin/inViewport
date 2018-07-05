@@ -41,7 +41,7 @@ function onVisibilityChange(element, strict, callback) {
  * @param {{top: number, bottom: number, left: number, right: number, now: boolean}} options
  * @return {number}
  */
-export function attach(element, strict, callback, options) {
+export function attach(element, strict, callback, options = {}) {
   const handler = onVisibilityChange(element, strict, callback, options);
   if (options.now) {
     handler();
