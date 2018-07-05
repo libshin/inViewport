@@ -14,10 +14,10 @@ function removeListener(id) {
   return delete store[id];
 }
 
-function onVisibilityChange(element, strict, callback) {
+function onVisibilityChange(element, strict, options, callback) {
   let old_visible;
   return () => {
-    const visible = inViewport(element, strict);
+    const visible = inViewport(element, strict, options);
     if (visible !== old_visible) {
       old_visible = visible;
       if (typeof callback == "function") {
@@ -41,8 +41,8 @@ function onVisibilityChange(element, strict, callback) {
  * @param {{top: number, bottom: number, left: number, right: number, now: boolean}} options
  * @return {number}
  */
-export function attach(element, strict, callback, options = {}) {
-  const handler = onVisibilityChange(element, strict, callback, options);
+export function attach(element, strict, options = {}, callback) {
+  const handler = onVisibilityChange(element, strict, options, callback);
   if (options.now) {
     handler();
   }

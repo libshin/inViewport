@@ -38,7 +38,7 @@ function onVisibilityChange(visible) {
   // content
 }
 
-// viewportListener.attach(element: DOMElement, strict: boolean, callback: visible => any, options) => id: number
+// viewportListener.attach(element: DOMElement, strict: boolean, options, callback: visible => any) => id: number
 const id = viewportListener.attach(element, true, onVisibilityChange, {});
 
 // viewportListener.detach(id: number)

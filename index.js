@@ -4,7 +4,7 @@
  * @param {boolean} strict
  * @return {boolean}
  */
-function inViewport(element, strict, options) {
+function inViewport(element, strict, options = {}) {
   const rect = element.getBoundingClientRect();
   const height = window.innerHeight || document.documentElement.clientHeight;
   const width = window.innerWidth || document.documentElement.clientWidth;
