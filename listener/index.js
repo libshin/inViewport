@@ -28,15 +28,24 @@ function onVisibilityChange(element, strict, callback) {
 }
 
 /**
+ * @callback visibleCallback
+ * @param {boolean} visible
+ */
+
+/**
  * Add listener on load, scroll, resize, content load, and call callback
  * function when the visibility of the element changes
- * @param {HTMLElement} element
+ * @param {HTMLImageElement} element
  * @param {boolean} strict
- * @param {function} callback
+ * @param {visibleCallback} callback
+ * @param {{top: number, bottom: number, left: number, right: number, now: boolean}} options
  * @return {number}
  */
-export function attach(element, strict, callback) {
-  const handler = onVisibilityChange(element, strict, callback);
+export function attach(element, strict, callback, options) {
+  const handler = onVisibilityChange(element, strict, callback, options);
+  if (options.now) {
+    handler();
+  }
   if (window.addEventListener) {
     window.addEventListener("DOMContentLoaded", handler, false);
     window.addEventListener("load", handler, false);

@@ -38,8 +38,8 @@ function onVisibilityChange(visible) {
   // content
 }
 
-// viewportListener.attach(element: DOMElement, strict: boolean, callback: visible => any) => id: number
-const id = viewportListener.attach(element, true, onVisibilityChange);
+// viewportListener.attach(element: DOMElement, strict: boolean, callback: visible => any, options) => id: number
+const id = viewportListener.attach(element, true, onVisibilityChange, {});
 
 // viewportListener.detach(id: number)
 viewportListener.detach(id);
@@ -48,3 +48,19 @@ viewportListener.detach(id);
 `onVisibilityChange` will only be called when the visibility changes.
 
 The strict / loose mode is the same as previously.
+
+## Options
+
+```js
+const defaultOptions = {
+  top: 0,
+  bottom: 0,
+  left: 0,
+  right: 0,
+  now: false
+};
+```
+
+`top`, `bottom`, `left`, `right` are extension values of the viewport (`bottom: 50` extends the viewport of 50px at the bottom)
+
+`now` triggers the scan function immediately, and doesn't wait for a scroll, resize, load event.
