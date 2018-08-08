@@ -30,7 +30,7 @@ In loose mode, the function `inViewport` returns `true` is at least a part of th
 ## Listener
 
 ```js
-const viewportListener = require("@libshin/in-viewport.listener");
+const viewportListener = require("@libshin/in-viewport/listener");
 
 const element = document.getElementById("id");
 
